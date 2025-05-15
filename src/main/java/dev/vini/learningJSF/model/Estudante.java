@@ -49,4 +49,12 @@ public class Estudante {
     public void setNota3(double nota3) {
         this.nota3 = nota3;
     }
+
+    public Turno getTurno() {
+        return turno;
+    }
+
+    public void setTurno(Turno turno) {
+        this.turno = turno;
+    }
 }
