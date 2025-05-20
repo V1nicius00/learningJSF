@@ -45,5 +45,15 @@
         <h:commandButton value="Redirecionar"
                          action="#{estudanteRegistrarBean.redirectTo('index2')}"/>
     </h:form>
+
+    <!-- onClick function -->
+    <h:form>
+        <h:commandButton value="Alert" onclick="alertFunction('teste')"/>
+    </h:form>
 </h:body>
+<script type="text/javascript">
+    function alertFunction(msg){
+        alert(msg);
+    }
+</script>
 </html>
