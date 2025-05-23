@@ -11,10 +11,10 @@ import java.util.List;
 public class ViewScopedBean implements Serializable {
 
     private String item;
-    private List<String> viewScoped = new ArrayList<String>();
+    private List<String> viewScopedList = new ArrayList<String>();
 
     public void addItem(){
-        viewScoped.add(item);
+        viewScopedList.add(item);
     }
 
     public String getItem() {
@@ -25,11 +25,11 @@ public class ViewScopedBean implements Serializable {
         this.item = item;
     }
 
-    public List<String> getViewScoped() {
-        return viewScoped;
+    public List<String> getViewScopedList() {
+        return viewScopedList;
     }
 
-    public void setViewScoped(List<String> viewScoped) {
-        this.viewScoped = viewScoped;
+    public void setViewScopedList(List<String> viewScopedList) {
+        this.viewScopedList = viewScopedList;
     }
 }
