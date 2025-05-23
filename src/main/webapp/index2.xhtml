@@ -8,9 +8,29 @@
 <h:head>
     <title>Index 2</title>
 </h:head>
-<h:form>
-    <h:commandButton value="Redirecionar"
-                     action="#{estudanteRegistrarBean.redirectTo('index')}"/>
-</h:form>
-
+<h:body>
+    <h:form id="formCalc">
+        <h:commandButton value="Redirecionar"
+                         action="#{estudanteRegistrarBean.redirectTo('index')}"/>
+        <br/>
+        <h:outputLabel value="Soma"/>
+        <h:inputText value="#{calculadoraBean.num1}"/>
+        <h:inputText value="#{calculadoraBean.num2}"/>
+        <h:commandButton value="Somar"
+                         action="#{calculadoraBean.somar}">
+            <f:ajax execute="@form" render="result"/>
+        </h:commandButton>
+        <br/>
+        <h:outputLabel value="Raiz Quadrada"/>
+        <h:inputText value="#{calculadoraBean.num1}"/>
+        <h:commandButton value="Raiz"
+                         action="#{calculadoraBean.raizQuadrada}">
+            <f:ajax execute="@form" render="result"/>
+        </h:commandButton>
+        <br/>
+        <h:panelGroup id="result">
+            <h:outputText value="#{calculadoraBean.result}"/>
+        </h:panelGroup>
+    </h:form>
+</h:body>
 </html>
