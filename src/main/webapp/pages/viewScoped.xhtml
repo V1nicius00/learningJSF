@@ -2,13 +2,20 @@
                 xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
-                xmlns:p="http://primefaces.org/ui"
                 xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-    <ui:define name="title">Home</ui:define>
+    <ui:define name="title">View Scoped</ui:define>
 
     <ui:define name="content">
-        <h:outputText value="Homepage" />
+        <h:form>
+            <h:inputText value="#{viewScopedBean.item}"></h:inputText>
+            <br/>
+            <h:commandButton value="Adicionar item" action="#{viewScopedBean.addItem()}"/>
+            <br/>
+            <h:dataTable value="#{viewScopedBean.viewScopedList}" var="item">
+                <h:outputText value="#{item}"/>
+            </h:dataTable>
+        </h:form>
     </ui:define>
 
 </ui:composition>
