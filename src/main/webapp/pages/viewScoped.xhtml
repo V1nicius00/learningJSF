@@ -13,7 +13,9 @@
             <h:commandButton value="Adicionar item" action="#{viewScopedBean.addItem()}"/>
             <br/>
             <h:dataTable value="#{viewScopedBean.viewScopedList}" var="item">
-                <h:outputText value="#{item}"/>
+                <h:column>
+                    <h:outputText value="#{item}"/>
+                </h:column>
             </h:dataTable>
         </h:form>
     </ui:define>

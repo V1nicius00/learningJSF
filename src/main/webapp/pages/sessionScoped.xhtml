@@ -13,7 +13,9 @@
             <h:commandButton value="Adicionar item" action="#{sessionScopedBean.addItem()}"/>
             <br/>
             <h:dataTable value="#{sessionScopedBean.sessionScopedList}" var="item">
-                <h:outputText value="#{item}"/>
+                <h:column>
+                    <h:outputText value="#{item}"/>
+                </h:column>
             </h:dataTable>
         </h:form>
     </ui:define>
